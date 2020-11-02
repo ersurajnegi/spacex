@@ -1,0 +1,35 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/common";
+.filters-container {
+  padding: 1rem;
+  background-color: $white-color;
+  @include box-shadow;
+  h3 {
+    margin-bottom: 20px;
+  }
+  .filter-criteria-container {
+    margin-bottom: 10px;
+    .title {
+      text-align: center;
+      border-bottom: 1px solid $black;
+    }
+    .filter-criteria {
+      .row {
+        .col-6:nth-child(even) button {
+          float: right;
+        }
+      }
+      .btn-green {
+        color: $black;
+        background-color: $default-green;
+        border-color: $default-green;
+        margin-bottom: 10px;
+        &:hover,
+        &.applied {
+          background-color: $applied-green;
+          border-color: $applied-green;
+        }
+      }
+    }
+  }
+}

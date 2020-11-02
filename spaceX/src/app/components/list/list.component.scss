@@ -1,0 +1,22 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/common";
+.card {
+  @include box-shadow;
+  .card-img-top {
+    border-radius: 50%;
+  }
+  .card-body {
+    padding: 1rem 0;
+  }
+  .details-list {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+    .details-title {
+      font-weight: 600;
+      margin-right: 10px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  }
+}

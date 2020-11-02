@@ -1,0 +1,71 @@
+<section class="filters-container">
+  <h3>Filters</h3>
+  <div class="filter-criteria-container">
+    <h6 class="title">Filter Years</h6>
+    <div class="filter-criteria">
+      <div class="row">
+        <div class="col-6" *ngFor="let year of filterYears">
+          <button
+            class="btn btn-green"
+            [class.applied]="filters?.year == year"
+            (click)="applyYearFilter(year)"
+          >
+            {{ year }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="filter-criteria-container">
+    <h6 class="title">SuccessFull Launch</h6>
+    <div class="filter-criteria">
+      <div class="row">
+        <div class="col-6">
+          <button
+            class="btn btn-green"
+            [class.applied]="filters?.launch == 'true'"
+            (click)="applyLaunchFilter('true')"
+          >
+            True
+          </button>
+        </div>
+        <div class="col-6">
+          <button
+            class="btn btn-green"
+            [class.applied]="filters?.launch == 'false'"
+            (click)="applyLaunchFilter('false')"
+          >
+            False
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="filter-criteria-container">
+    <h6 class="title">SuccessFull Landing</h6>
+    <div class="filter-criteria">
+      <div class="row">
+        <div class="col-6">
+          <button
+            class="btn btn-green"
+            [class.applied]="filters?.land == 'true'"
+            (click)="applyLandFilter('true')"
+          >
+            True
+          </button>
+        </div>
+        <div class="col-6">
+          <button
+            class="btn btn-green"
+            [class.applied]="filters?.land == 'false'"
+            (click)="applyLandFilter('false')"
+          >
+            False
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
